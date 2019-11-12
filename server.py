@@ -50,20 +50,20 @@ def getPersons():
 	return rows_total
 
 
-def getDrugs():
-	rows_total = ""
-	with dbapi2.connect(dsn) as connection:
-		with connection.cursor() as cursor:
-			print('=================')
-			statement = """SELECT * FROM drugs;"""
-			cursor.execute(statement)
-			for row in cursor:
-				print(row)
-				rows_total += (str(row)+"\n")
-				# title, score, votes = row
-				# print('{}: {} ({} votes)'.format(title, score, votes))
+# def getDrugs():
+	# rows_total = ""
+	# with dbapi2.connect(dsn) as connection:
+		# with connection.cursor() as cursor:
+			# print('=================')
+			# statement = """SELECT * FROM drugs;"""
+			# cursor.execute(statement)
+			# for row in cursor:
+				# print(row)
+				# rows_total += (str(row)+"\n")
+				# # title, score, votes = row
+				# # print('{}: {} ({} votes)'.format(title, score, votes))
 
-	return rows_total
+	# return rows_total
 
 
 
@@ -81,7 +81,7 @@ def home_page():
 def persons_page():
 
 	# return render_template("index.html")
-	
+
 	return " ----  ----  ----  ---- Persons Page ----  ----  ----  ---- "
 
 
@@ -89,7 +89,7 @@ def persons_page():
 def drug_page():
 
 	# return render_template("index.html")
-	
+
 	return " ----  ----  ----  ---- Drugs Page  ----  ----  ----  ---- "
 
 
