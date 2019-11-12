@@ -49,6 +49,24 @@ def getPersons():
 
 	return rows_total
 
+
+def getDrugs():
+	rows_total = ""
+	with dbapi2.connect(dsn) as connection:
+		with connection.cursor() as cursor:
+			print('=================')
+			statement = """SELECT * FROM drugs;"""
+			cursor.execute(statement)
+			for row in cursor:
+				print(row)
+				rows_total += (str(row)+"\n")
+				# title, score, votes = row
+				# print('{}: {} ({} votes)'.format(title, score, votes))
+
+	return rows_total
+
+
+
 @app.route("/")
 def home_page():
 	# 
@@ -60,7 +78,7 @@ def home_page():
 
 
 @app.route("/persons")
-def home_page():
+def persons_page():
 
 	# return render_template("index.html")
 	
@@ -68,7 +86,7 @@ def home_page():
 
 
 @app.route("/drugs")
-def home_page():
+def drug_page():
 
 	# return render_template("index.html")
 	
