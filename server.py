@@ -4,6 +4,23 @@ import psycopg2 as dbapi2
 
 
 
+'''
+	CREATE DATABASE COMMANDS  FOR REMINDER
+	
+	persons:
+		CREATE TABLE persons (id SERIAL  PRIMARY KEY, name VARCHAR(50));
+		INSERT INTO persons(name) VALUES ('Marilyn Boyle');
+	
+	schedules:
+		CREATE TABLE schedules ( personid INTEGER NOT NULL REFERENCES persons(id),  drugname VARCHAR(30) NOT NULL, drugtime VARCHAR(30) NOT NULL, PRIMARY KEY(personid, drugname,drugtime));
+		INSERT INTO schedules(personid, drugname, drugtime) VALUES (2,'dicloflam', '05:00-14.11.2019');
+'''
+
+
+
+
+
+
 # FOR HEROKU
 dsn = """user='xqvgwlcwdfbnat' password='1811b22121a205b8765fa78bbcb1d84dc8ec5cb7d74ec656e48c73e0c3cc1cf4'
          host='ec2-54-246-100-246.eu-west-1.compute.amazonaws.com' port=5432 dbname='dfqulnedgiurqk'"""
@@ -93,12 +110,12 @@ def schedules_page():
 	'''
 		GET CONTENT OF THE DRUGS DATABASE
 	'''
-	# x = getDrugs()
+	x = getSchedules()
 	
-	# return render_template("index.html")
+	
 
-	return " ----  ----  ----  ---- Drug Schedules Page Under Development  ----  ----  ----  ---- "
-
+	# return " ----  ----  ----  ---- Drug Schedules Page Under Development  ----  ----  ----  ---- "
+	return x
 
 if __name__ == "__main__":
     app.run()
