@@ -69,28 +69,35 @@ def getDrugs():
 
 @app.route("/")
 def home_page():
-	# 
-	x = getPersons()
-	# return render_template("index.html")
-	return x
+
+	return render_template("index.html")
 
 
 
 
 @app.route("/persons")
 def persons_page():
+	
+	'''
+		GET CONTENT OF THE PERSONS DATABASE
+	'''
 
 	# return render_template("index.html")
-
-	return " ----  ----  ----  ---- Persons Page ----  ----  ----  ---- "
+	x = getPersons()
+	# return " ----  ----  ----  ---- Persons Page ----  ----  ----  ---- "
+	return x
 
 
 @app.route("/drugs")
 def drug_page():
-
+	'''
+		GET CONTENT OF THE DRUGS DATABASE
+	'''
+	# x = getDrugs()
+	
 	# return render_template("index.html")
 
-	return " ----  ----  ----  ---- Drugs Page  ----  ----  ----  ---- "
+	return " ----  ----  ----  ---- Drugs Page Under Development  ----  ----  ----  ---- "
 
 
 if __name__ == "__main__":
