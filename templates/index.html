@@ -1,17 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Index</title>
-</head>
+      <form name="form" action="http://ksklee.pythonanywhere.com/loggedin/" method="POST">{% csrf_token %}
+     <!--   <form name = "form" action = "http://ksklee.pythonanywhere.com/login/" method = "POST" >{% csrf_token %}    -->
+         <div style="max-width:870px;">
+            <center>
+               <input type="text" style="margin-left:20%;" placeholder="Person Name " name="percentage">
+            </center>
+         </div>
 
-<body>
-  <h1 style="color: blue">Index</h1>
-  <p>This is an HTML file served up by Flask</p>
-</body>
+         <br>
 
-</html>
+         <div style="max-width:870px;">
+            <center>
+               <input type="text" style="margin-left:20%;" placeholder="Drug Name" name="aggregate">
+            </center>
+         </div>
 
+         <br>
+
+         <div style="max-width:870px;">
+            <center>
+
+               <button style="border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type="submit" value="Login">
+                  <!--  <strong>Scan Market</strong> -->
+                   <strong>Show Schedule</strong>
+               </button>
+
+               <button style="border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type="submit" value="Login">
+                  <!--  <strong>Scan Market</strong> -->
+                   <strong>Get All Schedules</strong>
+               </button>
+
+            </center>
+         </div>
+
+
+      </form>
+	  <br> <br>
+
+    <br>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
