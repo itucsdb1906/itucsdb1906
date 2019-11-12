@@ -55,7 +55,7 @@ def getDrugs():
 	with dbapi2.connect(dsn) as connection:
 		with connection.cursor() as cursor:
 			print('=================')
-			statement = """SELECT * FROM drugs;"""
+			statement = """SELECT * FROM schedules;"""
 			cursor.execute(statement)
 			for row in cursor:
 				print(row)
@@ -88,8 +88,8 @@ def persons_page():
 	return x
 
 
-@app.route("/drugs")
-def drug_page():
+@app.route("/schedules")
+def schedules_page():
 	'''
 		GET CONTENT OF THE DRUGS DATABASE
 	'''
@@ -97,7 +97,7 @@ def drug_page():
 	
 	# return render_template("index.html")
 
-	return " ----  ----  ----  ---- Drugs Page Under Development  ----  ----  ----  ---- "
+	return " ----  ----  ----  ---- Drug Schedules Page Under Development  ----  ----  ----  ---- "
 
 
 if __name__ == "__main__":
