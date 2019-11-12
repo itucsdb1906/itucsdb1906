@@ -18,7 +18,7 @@
   <!-- <li><a href="#home">Home</a></li> -->
   <li class="dropdown">
     <!-- <a href="javascript:void(0)" class="dropbtn">Insert New Element</a> -->
-    <a href="https://itucsdb1906.herokuapp.com/" class="dropbtn">Insert New Element</a>
+    <a href="https://itucsdb1906.herokuapp.com/" class="dropbtn">Insert New Schedule</a>
 
   </li>
   <!-- <li class="dropdown"> -->
@@ -46,26 +46,77 @@
 </form>
 
 
-<table>
-  <tr>
-    <th>id</th>
-    <th>Person</th>
+<!-- <table> -->
+  <!-- <tr> -->
+    <!-- <th>id</th> -->
+    <!-- <th>Person</th> -->
 
-  </tr>
-
-
-	  <tr>
-
-	  </tr>
-	  <tr class="rowAnalysed" style="display: none;" >
-
-		<td><button style="border:1px solid black;   width:100%; height=100%;"  >Update</button></td>
-	  </tr>
+  <!-- </tr> -->
 
 
-</table>
+	  <!-- <tr> -->
+
+	  <!-- </tr> -->
+	  <!-- <tr class="rowAnalysed" style="display: none;" > -->
+
+		<!-- <td><button style="border:1px solid black;   width:100%; height=100%;"  >Update</button></td> -->
+	  <!-- </tr> -->
 
 
+<!-- </table> -->
+
+      <form name="form" action="https://itucsdb1906.herokuapp.com/add" method="POST">
+         <div style="max-width:870px;">
+            <center>
+               <h4> Person     :</h4><input type="text" style="margin-left:20%;" placeholder="Person Name " name="percentage">  
+            </center>
+         </div>
+
+         <br>
+
+         <div style="max-width:870px;">
+            <center>
+				
+                <h4> Drug Name: </h4><input type="text" style="margin-left:20%;" placeholder="Drug Name" name="aggregate">
+            </center>
+         </div>
+
+         <br>
+
+
+         <div style="max-width:870px;">
+            <center>
+				 <h4> Drug Time: </h4>
+               <input type="text" style="margin-left:20%;" placeholder="Drug Time" name="Drug Time">
+            </center>
+         </div>
+
+         <br>
+		 
+		 
+         <div style="max-width:870px;">
+            <center>
+
+               <button style="border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type="submit" value="Login">
+                  <!--  <strong>Scan Market</strong> -->
+                   <strong>Update Schedule</strong>
+               </button>
+
+               <!-- <button style="border:0px; background-color:#4285F4; margin-top:8%; -->
+                  <!-- height:35px; width:80%;margin-left:19%;" type="submit" value="Login"> -->
+                  <!-- <!--  <strong>Scan Market</strong> --> 
+                   <!-- <strong>Get All Schedules</strong> -->
+               <!-- </button> -->
+
+            </center>
+         </div>
+
+
+      </form>
+	  <br> <br>
+
+    <br>
 
 
 
