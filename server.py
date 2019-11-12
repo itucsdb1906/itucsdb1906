@@ -50,7 +50,7 @@ def getPersons():
 	return rows_total
 
 
-def getDrugs():
+def getSchedules():
 	rows_total = ""
 	with dbapi2.connect(dsn) as connection:
 		with connection.cursor() as cursor:
